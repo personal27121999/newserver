@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+const { getDeliveryBoys, addDeliveryBoy, updateDeliveryBoy, deleteDeliveryBoy, resetDeliveryBoyPassword, getDeliveryBoyOrders } = require('../controllers/deliveryBoyController');
+const { protect } = require('../middleware/authMiddleware');
+router.use(protect);
+router.get('/', getDeliveryBoys);
+router.post('/', addDeliveryBoy);
+router.get('/:id/orders', getDeliveryBoyOrders);
+router.put('/:id', updateDeliveryBoy);
+router.delete('/:id', deleteDeliveryBoy);
+router.post('/:id/reset-password', resetDeliveryBoyPassword);
+module.exports = router;
