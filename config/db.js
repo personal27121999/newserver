@@ -16,7 +16,7 @@ mongoose.connection.on('disconnected', () => {
 });
 
 mongoose.connection.on('reconnected', () => {
-  console.log('✅ MongoDB reconnected');
+  console.log('✅ MongoDB reconnected its original ');
 });
 
 module.exports = connectDB;
