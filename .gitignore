@@ -1,10 +1,6 @@
 node_modules/
 .env
-uploads/
 dist/
-uploads/products/*.jpg
-uploads/products/*.png
-uploads/products/*.webp
 .DS_Store
 *.log
 
